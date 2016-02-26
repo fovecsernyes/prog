@@ -192,7 +192,7 @@ int max(int a, int b){
 using namespace std;
 
 
-int max(int a, int b)
+int max(int a, int b);
 
 int main(){
   cout << max(2,3);
