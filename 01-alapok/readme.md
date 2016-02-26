@@ -354,7 +354,7 @@ Ahhoz, hogy használhassunk egy új fejlécfájlt kell includeolnunk, ami meglep
 #include <vector>
 ```
 
-Létrehozása egy kicsit érdekes, mert nem simán ahogy gondolnánk, hogy változó típus és név, mert itt van a típusnak egy paramétere is, amivel azt adjuk meg, hogy miket szeretnénk tárolni ebben a vectorban. Ha nem lenne ilyen támogatás a C++-ban akkor létre kéne hozni minden típusra egy-egy vector osztyált, de mi lenne akkor ha egy saját új típusból szeretnénk vectort csinálni? Hát természetesen nem sikerlüne (egyszerűen legalábbis nem), tehát template paramétert adunk meg a változó létrehozásakor.
+Létrehozása egy kicsit érdekes, mert nem simán ahogy gondolnánk, hogy változó típus és név, mert itt van a típusnak egy paramétere is, amivel azt adjuk meg, hogy miket szeretnénk tárolni ebben a vectorban. Ha nem lenne ilyen támogatás a C++-ban akkor létre kéne hozni minden típusra egy-egy vector osztályt, de mi lenne akkor ha egy saját új típusból szeretnénk vectort csinálni? Hát természetesen nem sikerülne (egyszerűen legalábbis nem), tehát template paramétert adunk meg a változó létrehozásakor.
 
 Tehát ha mondjuk egy int-ekből álló tömböt akarunk amit v-nek nevezünk, akkor a 
 ```c++
@@ -474,7 +474,7 @@ A c++-ban minden alapesetben másolódik (egy vectornál ez problémát jelenthe
 ```c++
 #include <iostream>
 
-int test(int a){
+void test(int a){
   a = 31;
 }
 
@@ -489,7 +489,7 @@ Van viszont egy kis jelünk amivel megtudjuk mondani a fordítónak, hogy ne má
 ```c++
 #include <iostream>
 
-int test(int& a){
+void test(int& a){
   a = 31;
 }
 
@@ -505,7 +505,7 @@ Figyelni kell arra, hogy ha referencia szerinti paramétert várunk akkor konsta
 ```c++
 #include <iostream>
 
-int test(int& a){
+void test(int& a){
   std::cout << a;
 }
 
