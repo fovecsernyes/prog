@@ -524,7 +524,7 @@ using namespace std;
 
 void writeVector(const vector<int>& v){
   cout << v.size() << endl; //3-at fog kiírni és egy sortörést
-  for(int a=0;a<v.size()){
+  for(int a=0;a<v.size();a++){
     cout << v[a] << endl;  //kiír egy elemet egy cikluslépésben
   }
 }
