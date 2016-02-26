@@ -192,7 +192,7 @@ int max(int a, int b){
 using namespace std;
 
 
-int max(int a, int b)
+int max(int a, int b);
 
 int main(){
   cout << max(2,3);
@@ -252,7 +252,7 @@ Nem helyes, mivel az első hívásnál még a fordító nem tud a max függvény
 using namespace std;
 
 
-int max(int a, int b)
+int max(int a, int b);
 
 int main(){
   cout << max(2,3);
@@ -491,7 +491,7 @@ Van viszont egy kis jelünk amivel megtudjuk mondani a fordítónak, hogy ne má
 
 int test(int& a){
   a = 31;
-}
+};
 
 int main(){
   int asd = 12;
